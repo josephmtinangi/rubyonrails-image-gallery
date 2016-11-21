@@ -1,24 +1,17 @@
-# README
+# Rubyonrails Image Gallery
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Description & Features
+- Implement a photo gallery with categories
+- Photos will have a title and description
+- Photos wil open up ina Lightbox when clicked
+- Carrierwave Gem will be used for uploading and image processing
+- Image & category CRUD in frontend
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Lessons to be learnt
+- Postgresql database integration & console
+- MVC design patter
+- CRUD operations in Rails
+- Bootstrap-Sass Gems
+- Carrierwave - Image upload gem
+- jQuery Lightbox
+- jQuery hover effect
