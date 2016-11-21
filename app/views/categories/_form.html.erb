@@ -1,0 +1,12 @@
+<!-- Check for errors -->
+<% if @category.errors.any? %>
+    <% @category.errors.full_messages.each do |msg| %>
+        <!-- Show errors -->
+        <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+<% end %>
+
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>

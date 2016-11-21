@@ -1,2 +1,10 @@
-<h1>Images#new</h1>
-<p>Find me in app/views/images/new.html.erb</p>
+<h2>Upload Image</h2>
+
+<%= form_for @image, :html => {:multipart => true} do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', images_path, class: 'btn btn-default' %>
+
+<% end %>

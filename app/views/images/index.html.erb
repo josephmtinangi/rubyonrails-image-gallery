@@ -1,135 +1,42 @@
 <div id="gallery">
 					<h2>Featured Memories</h2>
-					<div class="row">
-						<div class="col-sm-3">
+					
+					<% if @images.exists? %>
+						<% @images.each_slice(4) do |image| %>
+						
+						<div class="row">
+							
+							<% image.each do |image| %>
+							
+							<div class="col-sm-3">
 							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
+								<a href="<%= image.image_url() %>" class="photo-hover" data-lightbox="my-images" data-title="<%= image.image_title %>">
 									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
+										<div class="head-line"><%= image.image_title %></div>
 										<div class="line"></div>
 										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
+											<%= image.image_description %>
 										</div>
 									</div>
 									<div class="mask"></div>
 								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
+								<div class="photo-img"><%= image_tag image.image_url(:thumb) %></div>
 							</div>
 						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-					</div>	
-					<div class="row">
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="text-center photo photo-type-line">
-								<a href="http://lorempixel.com/g/640/480" class="photo-hover" data-lightbox="my-images" data-title="Lorem Ipsum">
-									<div class="photo-info">
-										<div class="head-line">Lorem Ipsum</div>
-										<div class="line"></div>
-										<div class="desc">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-											tempor incididunt ut labore et dolore magna aliqua. 
-										</div>
-									</div>
-									<div class="mask"></div>
-								</a>
-								<div class="photo-img"><img src="http://lorempixel.com/g/240/200" class="img-responsive" alt=""></div>
-							</div>
-						</div>
-					</div>	
+						
+						
+							
+							<% end %>
+						
+					</div>
+						
+						<% end %>
+						
+						<% else %>
+						
+						<h2>There are no images</h2>
+						
+					<% end %>
+					
+					
 				</div>
