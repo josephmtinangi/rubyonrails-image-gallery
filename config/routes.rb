@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'images/index'
+
+  get 'images/show'
+
+  get 'images/new'
+
+  get 'images/edit'
+
+  get 'images/delete'
+
   get 'categories/index'
 
   get 'categories/show'
