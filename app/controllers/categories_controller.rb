@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
+    @images = @category.images
   end
 
   def new
