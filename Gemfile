@@ -27,6 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'rmagick', '~> 2.16'
+gem 'carrierwave', '~> 0.11.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'autoprefixer-rails', '~> 6.5', '>= 6.5.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
