@@ -2,8 +2,8 @@
 
 <%= form_for @category do |f| %>
 
-    <%= render 'categories/form' %>
-    
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
     <%= f.submit 'Submit', class: 'btn btn-primary' %>
     <%= link_to 'Cancel', categories_path, class: 'btn btn-default' %>
 
