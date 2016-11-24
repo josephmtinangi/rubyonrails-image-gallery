@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'upload' => 'images#new', :as => 'upload'
 
   get 'images/show'
