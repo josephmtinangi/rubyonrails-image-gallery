@@ -8,3 +8,26 @@
     <%= link_to 'Cancel', categories_path, class: 'btn btn-default' %>
 
 <% end %>
+
+<h3 class="page-header">Images in <%= @category.name %></h3>
+
+<%  if @images.exists? %>
+
+    <% @images.each_slice(6) do |image| %>
+        <div class="row">
+            <% image.each do |image| %>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <%= image_tag image.image_url(:thumb) %>
+                        <div class="caption">
+                            <p>
+                            <%= link_to 'Delete', image_path(image), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+
+<% end %>

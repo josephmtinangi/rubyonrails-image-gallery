@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
 
   def edit
     @category = Category.find(params[:id])
+     @images = @category.images
   end
   
   def update
@@ -40,8 +41,7 @@ class CategoriesController < ApplicationController
     
   end
 
-  def delete
-  end
+
 
   private
   def category_params
