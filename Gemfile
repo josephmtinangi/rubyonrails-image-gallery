@@ -31,6 +31,7 @@ gem 'rmagick', '~> 2.16'
 gem 'carrierwave', '~> 0.11.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'autoprefixer-rails', '~> 6.5', '>= 6.5.3'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
