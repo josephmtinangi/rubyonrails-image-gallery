@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rmagick', '~> 2.16'
 gem 'carrierwave', '~> 0.11.2'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'bootstrap-sass', '~> 3.4'
 gem 'autoprefixer-rails', '~> 6.5', '>= 6.5.3'
 
 # Use Capistrano for deployment
